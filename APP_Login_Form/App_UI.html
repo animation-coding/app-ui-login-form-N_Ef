@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>App UI Login Form Neumorphism Effect</title>
+<!-----font-awesome------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<section class="sign-in">
+    <div class="main-page">
+        <div class="name">
+            <h1>App UI</h1>
+            Neumorphism Effect App UI Login Form
+        </div>
+        <div class="form-btns">
+            <button class="s-btn">Sign In</button>
+            <button class="f-btn">Sign In with Facebook</button>
+            <a class="new-btn" href="#">New Account ?</a>
+        </div>
+        <div class="cancel">
+            <a href="#"><i class="fas fa-times"></i></a>
+        </div>
+    </div>
+
+    <div class="sign-in-page">
+        <form>
+            <input placeholder="Email" type="email" />
+            <input placeholder="password" type="password" />
+            <button>Sign In</button>
+        </form>
+    </div>
+
+    <div class="sign-up-page">
+        <form>
+            <input placeholder="Email" type="email" />
+            <input placeholder="password" type="password" />
+            <input placeholder="Repeat password" type="password">
+            <button>Sign Up</button>
+        </form>
+    </div>
+</section>    
+
+    
+<!-----jquery+3.5.1----->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+<script>
+$(document).on('click','.s-btn',function()
+{
+    $('.sign-in').addClass('active-sign-in')
+    .siblings('.sign-in').removeClass('active-sign-up')
+});
+
+$(document).on('click','.new-btn',function()
+{
+    $('.sign-in').addClass('active-sign-up')
+    .siblings('.sign-in').removeClass('active-sign-in')
+});
+
+$(document).ready(function()
+{
+    $('.cancel a').click(function()
+    {
+        $('.sign-in').removeClass('active-sign-in , active-sign-up')
+    })
+});
+
+
+
+</script>
+</body>
+</html>
